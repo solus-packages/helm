@@ -1,0 +1,24 @@
+name       : helm
+version    : 0.9.0
+release    : 1
+source     :
+    - git|https://github.com/Jikstra/helm.git : d6a02fe309f47cf125cfb811466454a617b1745e
+license    : GPL-3.0-or-later
+summary    : Polyphonic synthesizer with realtime modulation feedback
+component  : multimedia.audio
+description: |
+    Helm is a MIDI enabled polyphonic music synthesizer with an easy to use parameter modulation system with real-time graphical feedback. Helm has a subtractive synthesizer engine with three oscillators with 15 anti-aliased waveforms, cross modulation, 32 voice polyphony, a low-pass, high-pass, band-pass, notch, low-shelf, high-shelf and all-pass filter. There is also a formant filter, stutter, delay and reverb effects, patch browsing, MIDI learn and more.
+builddeps  :
+    - pkgconfig(alsa)
+    - pkgconfig(freetype2)
+    - pkgconfig(gl)
+    - pkgconfig(jack)
+    - pkgconfig(libcurl)
+    - pkgconfig(xcursor)
+    - pkgconfig(xinerama)
+setup      : |
+    %configure
+build      : |
+    %make
+install    : |
+    %make_install
