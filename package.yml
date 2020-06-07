@@ -1,6 +1,6 @@
 name       : helm
 version    : 0.9.0
-release    : 3
+release    : 4
 source     :
     - git|https://github.com/Jikstra/helm.git : d6a02fe309f47cf125cfb811466454a617b1745e
 license    : GPL-3.0-or-later
